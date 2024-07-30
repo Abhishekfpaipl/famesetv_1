@@ -20,44 +20,13 @@
                         <div class="d-flex justify-content-center justify-content-md-start gap-2 align-items-start ">
                             <span>Fameset</span>
                             <i class="bi bi-star-fill text-warning"></i>
-                            <span>8.5 Rating</span>
-
-                        </div>
-
-                    </div>
-
-                    <!-- <div class="d-flex gap-4 justify-content-md-start justify-content-center my-4">  
-                        <div class="">
-                            <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#likeModal">
-                                <i :class="likeIcon" class=""></i>
-                            </button>
-                            <div class="mb-0 smaller text-center pt-2 d-flex flex-column">
-                                <span>1.35K+ </span>
-                                <span>Likes </span>
-                            </div>
-                        </div>
-                        <div class="">
-                            <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#heartModal">
-                                <i :class="heartIcon" class=""></i>
-                            </button>
-                            <div class="mb-0 smaller text-center pt-2 d-flex flex-column">
-                                <span>1.35K+ </span>
-                                <span>Hearts </span>
-                            </div>
-
-                        </div>
-                        <div class="">
-                            <button :class="promoteButtonClass" class="btn btn-outline-dark"
-                                @click="toggleIcon('promote')">
-                                <i :class="promoteIcon" class="me-2"></i> {{ promoteText }}
-                            </button>
-                            <p class="mb-0 smaller text-center pt-2">1.35K+</p>
-                        </div>
-                    </div> -->
+                            <span>8.5 Rating</span> 
+                        </div> 
+                    </div> 
                 </div>
             </div>
         </div>
-        <div class="my-5">
+        <!-- <div class="my-5">
             <h1 class="text-center mb-4">Top Promoters</h1>
             <div class="d-flex justify-content-center  gap-2 overflow-x-scroll w-100" id="scroll">
                 <img :src="image" style="width: 80px; height: 80px; object-fit: contain;" v-for="image in images"
@@ -81,16 +50,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <TestimonialSection />
-
-
-
-
-
-
-
+        </div>  -->
+        <TestimonialSection /> 
         <OffcanvasRating />
         <OffcanvasPromoters />
         <OffcanvasThankful />
@@ -98,7 +59,7 @@
 </template>
 
 <script>
-import AutoCounter from '@/components/AutoCounter.vue';
+// import AutoCounter from '@/components/AutoCounter.vue';
 import OffcanvasRating from '@/components/OffcanvasRating.vue';
 import OffcanvasPromoters from '@/components/OffcanvasPromoters.vue';
 import TestimonialSection from '@/components/TestimonialSection.vue';
@@ -107,7 +68,7 @@ import OffcanvasThankful from '@/components/OffcanvasThankful.vue';
 export default {
     name: 'InfoSection',
     components: {
-        AutoCounter,
+        // AutoCounter,
         OffcanvasRating,
         TestimonialSection,
         OffcanvasPromoters,

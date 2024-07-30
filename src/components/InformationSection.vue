@@ -1,25 +1,4 @@
-<template>
-    <!-- <div class="my-3">
-        <nav class="p-0 pt-3 pb-1 position-sticky sticky-nav bg-dark border-0">
-            <div class="nav nav-tabs d-flex justify-content-center flex-nowrap overflow-x-scroll border-0" id="scroll"
-                role="tablist">
-                <button v-for="(tab, index) in tabs" :key="tab.id"
-                    :class="['nav-link', { active: index === 0 }, 'text-white small px-2']" :id="`nav-${tab.id}-tab`"
-                    data-bs-toggle="tab" :data-bs-target="`#nav-${tab.id}`" type="button" role="tab"
-                    :aria-controls="`nav-${tab.id}`" :aria-selected="index === 0 ? 'true' : 'false'">
-                    {{ tab.name }}
-                </button>
-            </div>
-        </nav>
-        <div class="tab-content mt-3" id="nav-tabContent">
-            <div v-for="(tab, index) in tabs" :key="tab.id" :class="['tab-pane fade', { 'show active': index === 0 }]"
-                :id="`nav-${tab.id}`" role="tabpanel" :aria-labelledby="`nav-${tab.id}-tab`" tabindex="0">
-                <component :is="tab.component" />
-            </div>
-        </div>
-    </div> -->
-
-
+<template> 
     <div>
         <ul class="px-2 nav nav-pills justify-content-start align-items-center sticky-nav" id="pills-tab"
             role="tablist">
@@ -74,8 +53,8 @@ import TimelineSection from '@/components/TimelineSection.vue';
 import AboutusSection from "@/components/AboutusSection.vue";
 import AchievementsSection from "@/components/AchievementsSection.vue";
 // import GalleryCollage from "@/components/GalleryCollage.vue";
-// import OffcanvasRating from "@/components/OffcanvasRating.vue";
-// import PromoteSection from "@/components/OffcanvasPromoters.vue";
+import ReviewSection from "@/components/ReviewSection.vue";
+import PromotionSection from '@/components/PromotionSection.vue';
 export default {
     name: "InformationSection",
     components: {
@@ -84,17 +63,17 @@ export default {
         AchievementsSection,
         // GalleryCollage,
         TimelineSection,
-        // OffcanvasRating,
-        // PromoteSection,
+        ReviewSection,
+        PromotionSection,
     },
     data() {
         return {
             tabs: [
                 { count:"10", id: 'Showcase', name: 'Showcase', component: 'AchievementsSection' },
-                // { count:"20", id: 'Review', name: 'Review', component: 'OffcanvasRating' },
+                { count:"20", id: 'Review', name: 'Review', component: 'ReviewSection' },
                 { count:"30", id: 'Timeline', name: 'Timeline', component: 'TimelineSection' },
                 // { count:"40", id: 'Gallery', name: 'Gallery', component: 'GalleryCollage' },
-                // { count:"50", id: 'Promoters', name: 'Promoters', component: 'PromoteSection' },
+                { count:"50", id: 'Promoters', name: 'Promoters', component: 'PromotionSection' },
                 { count:"50", id: 'About', name: 'About', component: 'AboutusSection' },
                 // { count:"60", id: 'connect', name: 'Connect', component: 'ContactSection' },
             ],

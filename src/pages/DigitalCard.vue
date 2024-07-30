@@ -17,7 +17,7 @@
 <script>
 // import TopSection from '@/components/digitalcard/TopSection.vue'
 import DigitalCardNav from '@/components/DigitalCardNav.vue';
-import InfoSection from '@/components/InfoSection.vue';
+import InfoSection from '@/components/digitalcard/InfoSection.vue';
 import InformationSection from '@/components/InformationSection.vue';
 import CarouselBanner from '@/components/ResellerCarousel.vue'; 
 import ResellerBottomNav from '@/components/ResellerBottomNav.vue';
@@ -25,7 +25,8 @@ import ResellerBottomNav from '@/components/ResellerBottomNav.vue';
 export default {
   name: "DigitalCard",
   components: {
-    DigitalCardNav, 
+    DigitalCardNav,
+    // TopSection,
     InfoSection,
     InformationSection,
     CarouselBanner, 
