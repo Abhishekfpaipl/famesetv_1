@@ -1,12 +1,15 @@
 <template>
-    <div class="text-white" style="background-color: black;">
+    <div class="text-white bg-dark">
         <TopBanner />
         <Banner brandColorOne="#125252" v-observe />
-        <div class="my-5">
+        <!-- <div class="my-5">
             <VideoSection v-observe />
-        </div>
+        </div> -->
         <div class="my-5">
             <ServicesLeadManagement :values="leads" title="Features, that boost your attention!" v-observe />
+        </div>
+        <div class="my-5">
+            <WhyChooseUs :description="whychooseUs" title="why choose us" v-observe />
         </div>
         <div class="my-5">
             <AutoScrolling v-observe />
@@ -18,32 +21,22 @@
             <StepsForRegistration v-observe />
         </div>
         <div class="my-5">
-            <ImageSection banner="/img/banner1.png" v-observe />
-        </div>
-        <div class="my-5">
             <SalesFunnel v-observe />
         </div>
-        <div class="my-5">
-            <CustomCounter brandColorOne="#125252" brandTextColor="#78E6B7" name1="customers" :value1="50" name2="years"
-                :value2="10" name3="team" :value3="150" v-observe />
+        <div class="">
+            <BookDemo :faqs="faqs" image-src="/img/demo.svg" title="Schedule a free demo" v-observe />
         </div>
-        <div class="my-5">
-            <WhyChooseUs :description="whychooseUs" title="why choose us" image="/img/whychooseUs.svg" v-observe />
+        <div class="">
+            <BusinessCounter brandColorOne="#125252" brandTextColor="#78E6B7" name1="customers" :value1="50"
+                name2="years" :value2="1" name3="team" :value3="150" v-observe />
         </div>
-        <div class="my-5">
-            <Comparison v-observe />
-        </div>
-        <div class="my-5">
+
+        <div class=" ">
             <TempFaqs :faqs="faqs" image-src="/img/faq.svg" title="Frequently asked questions" image-position="left"
                 v-observe />
         </div>
-        <div class="my-5">
-            <TempCustomers :reviews="customers" title="our customers" v-observe />
-        </div>
-        <div class="">
-            <BookDemo :faqs="faqs" image-src="/img/demo.svg" title="Book a free demo" v-observe />
-        </div>
-        <div>
+      
+        <div class="py-5">
             <HomeTestimonialSection />
         </div>
         <BottomShareIcons />
@@ -54,18 +47,15 @@
 import TopBanner from "@/components/business-site/TopBanner.vue";
 import Banner from "@/components/business-site/BannerSection.vue";
 import ServicesLeadManagement from "@/components/business-site/services/LeadManagement.vue";
-import VideoSection from "@/components/business-site/VideoSection.vue";
+// import VideoSection from "@/components/business-site/VideoSection.vue";
 import AutoScrolling from "@/components/business-site/services/AutoScrolling.vue";
 import BookDemo from "@/components/business-site/BookDemo.vue";
 import PriceSection from "@/components/business-site/PriceSection.vue";
 import StepsForRegistration from "@/components/business-site/StepsForRegistration.vue";
-import ImageSection from "@/components/business-site/ImageSection.vue";
 import SalesFunnel from "@/components/business-site/SalesFunnel.vue";
-import CustomCounter from "@/components/business-site/CustomCounter.vue";
+import BusinessCounter from "@/components/BusinessCounter.vue";
 import WhyChooseUs from "@/components/business-site/WhyChooseUs.vue";
-import Comparison from "@/components/business-site/ComparisonSection.vue";
 import TempFaqs from "@/components/business-site/TempFaqs.vue";
-import TempCustomers from "@/components/business-site/TempCustomers.vue";
 import BottomShareIcons from "@/components/business-site/BottomShareIcons.vue";
 import HomeTestimonialSection from "@/components/HomeTestimonialSection.vue";
 export default {
@@ -74,18 +64,15 @@ export default {
         TopBanner,
         Banner,
         ServicesLeadManagement,
-        VideoSection,
+        // VideoSection,
         AutoScrolling,
         BookDemo,
         PriceSection,
         StepsForRegistration,
-        ImageSection,
         SalesFunnel,
-        CustomCounter,
+        BusinessCounter,
         WhyChooseUs,
-        Comparison,
         TempFaqs,
-        TempCustomers,
         BottomShareIcons,
         HomeTestimonialSection,
     },
@@ -178,105 +165,52 @@ export default {
                 {
                     id: 432,
                     icon: 'bi-magnet fs-4',
-                    title: 'sales funnel landing page',
+                    image: "/img/features/Account Views.png",
+                    title: 'Views',
                     description: 'Get in touch with customers by using our contact form and sync their data with a CRM of your favour.'
                 },
                 {
                     id: 1,
                     icon: 'bi-funnel fs-4',
-                    title: "Lead capture automation",
+                    image: "/img/features/Achievements.png",
+                    title: "Achievements",
                     description: "Capture leads from all sources- website, facbook, google, lead providers, referrals - onto one platform with zero leakage.",
                 },
                 {
                     id: 2,
                     icon: 'bi-diagram-3 fs-4',
-                    title: "Lead distribution",
+                    image: "/img/features/Hearts.png",
+                    title: "Hearts",
                     description: "Easily track and distribute leads between your teams based on requirements or other dynamic criteria.",
                 },
                 {
                     id: 4,
                     icon: 'bi-megaphone fs-4',
-                    title: "Sales automation",
+                    image: "/img/features/Promote.png",
+                    title: "Promotes",
                     description: "Automate sales processes. Communicate with leads across various channels.",
                 },
                 {
                     id: 5,
                     icon: 'bi-telephone fs-4',
-                    title: "Direct Call Integration",
+                    image: "/img/features/Reactions.png",
+                    title: "Reactions",
                     description: "Call prospects in just one click . Track and record conversations to ensure high compliance and productivity.",
                 },
                 {
                     id: 65,
                     icon: 'bi-whatsapp fs-4',
-                    title: "WhatsApp Call Integration",
+                    image: "/img/features/Reviews.png",
+                    title: "Reviews",
                     description: "Call prospects in just one click . Track and record conversations to ensure high compliance and productivity.",
                 },
                 {
-                    id: 6,
-                    icon: 'bi-clipboard-data fs-4',
-                    title: "Real-time reports",
-                    description: "Over 135+ reports help you measure every piece of your process.",
+                    id: 65,
+                    icon: 'bi-whatsapp fs-4',
+                    image: "/img/features/Testimonial.png",
+                    title: "Testimonial",
+                    description: "Call prospects in just one click . Track and record conversations to ensure high compliance and productivity.",
                 },
-                {
-                    id: 32,
-                    icon: 'bi-box-arrow-in-down-left fs-4',
-                    title: "Import Leads",
-                    description: "Over 135+ reports help you measure every piece of your process - from campaign spending to sales closure rates.",
-                },
-                {
-                    id: 43,
-                    icon: 'bi-box-arrow-up-right fs-4',
-                    title: "Export Leads",
-                    description: "Over 135+ reports help you measure every piece of your process - from campaign spending to sales closure rates.",
-                },
-                {
-                    id: 13,
-                    icon: 'bi-stars fs-4',
-                    image: 'img/features/custom.png',
-                    title: 'Leads Auto qualification',
-                    description: 'Qualify leads based on their region, behavior, and other parameters'
-                },
-
-                {
-                    id: 72,
-                    icon: 'bi-archive fs-4',
-                    title: 'Add relevant details',
-                    description: 'Add notes, labels, or other documents to record in CRM.'
-                },
-
-                {
-                    id: 31,
-                    icon: 'bi-stack-overflow fs-4',
-                    image: 'img/features/wallet.png',
-                    title: 'Automate activites',
-                    description: 'Create workflows for faster, error-free communication and service.'
-                },
-                {
-                    id: 623,
-                    icon: 'bi-people fs-4',
-                    title: 'User management',
-                    description: 'Invite all your team members, upload them by Excel/CSV or connect with Microsoft 365 or google workspace.'
-                },
-                {
-                    id: 823,
-                    icon: ' bi-ui-checks fs-4',
-                    title: 'Stay connected',
-                    description: 'Receive real-time notification about activities in CRM across devices.'
-                },
-                {
-                    id: 823,
-                    icon: ' bi-calendar2-date fs-4',
-                    title: 'Schedule Leads',
-                    description: 'Receive real-time notification about activities in CRM across devices.'
-                },
-                {
-                    id: 54,
-                    icon: ' bi-lightning fs-4',
-                    image: 'img/features/uniform.png',
-                    title: 'Close deals quickly',
-                    description: "Generate invoices within CRM from prospect's record and update the deal stage and status."
-                },
-
             ],
             customers: [
                 {

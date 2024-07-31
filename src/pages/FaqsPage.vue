@@ -1,9 +1,9 @@
 <template>
-    <div style="padding-top:66px">
-        <div class="text-center fw-bold py-5 text-white" style="background-color: var(--bg-primary);">
+    <div class="bg-dark">
+        <div class="text-center fw-bold py-5 text-white" style="background-color: #000 !important;">
             <h1 class="text-center mb-4">Frequently Asked Questions</h1>
         </div>
-        <div class="container py-5 rounded-top-5 bg-white" style="margin-top: -40px;">
+        <div class="container py-5 rounded-top-5 bg-dark" style="margin-top: -40px;">
             <FaqSection/> 
         </div>
     </div>

@@ -1,19 +1,20 @@
 <template>
-    <div class="brandText container">
+    <div class=" container">
         <div class="py-2 mb-4">
-            <h1 class="text-center text-capitalize">{{ title }}</h1>
-            <p class="small mb-0 text-capitalize text-center">A simple CRM that grows with your business</p>
+            <h1 class="text-center text-capitalize">{{ title }}</h1> 
         </div>
-        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3">
+        <div class="row row-cols-1 row-cols-md-1 row-cols-lg-4 g-3">
             <div class="col" v-for="(lead, index) in values" :key="index">
                 <div class="position-relative w-100 d-flex justify-content-center align-items-center flex-fill">
-                    <div class="card position-relative w-100 p-3 d-flex flex-column bg-dark text-white">
+                    <div class="card position-relative w-100 p-2 d-flex flex-column bg-dark text-white">
                         <div class="image text-center">
-                            <i class="bi" :class="lead.icon"></i>
-                            <p class="text-capitalize text-ellipsis2">{{ lead.title }}</p>
+                            <img :src="lead.image"
+                                  width="300" style="object-fit: cover;" class="w-100" alt=""> 
+                            <p class="text-capitalize text-ellipsis2 fs-1">{{ lead.title }}</p>
                         </div>
                         <div class="content small text-ellipsis4">
-                            <small>{{ lead.description }}</small>
+                            <h1 class="text-center">{{ lead.title }}</h1>
+                            <h5 class="text-center">{{ lead.description }}</h5>
                         </div>
                     </div>
                 </div>
@@ -38,20 +39,21 @@ export default {
 
 <style scoped>
 .card:hover {
-    background-color: var(--brand-color) !important;
-    color: white !important;
+    background-color:black !important;
+    color: var(--brand-color) !important;
 }
 
 .card {
-    max-width: 300px;
-    min-height: 120px;
-    height: 120px; 
+    max-width: 500px;
+    min-height: 400px;
+    height: 400px;
     transition: 0.3s ease-in-out;
     border-radius: 15px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color:black !important;
 }
 
 .container .card .image {
@@ -68,7 +70,7 @@ export default {
 }
 
 .container .card .image i {
-    font-size: 2rem; 
+    font-size: 2rem;
 }
 
 .container .card .content {
@@ -85,7 +87,7 @@ export default {
 .container .card:hover .content {
     visibility: visible;
     opacity: 1;
-    max-height: 100px;
+    max-height: 400px;
     /* Adjust as needed */
     transition-delay: 0.2s;
 }
@@ -94,7 +96,8 @@ export default {
     transform: translateY(-10px);
     display: none;
 }
-.container .card:hover .image i{
+
+.container .card:hover .image i {
     display: none;
 
 }

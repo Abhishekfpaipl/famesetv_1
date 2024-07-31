@@ -64,7 +64,7 @@ nav {
   --bg-secondary: #EB5E28;
   --bg-tertiary: #FEC007;
   --bg-forth: #FBF4F4;
-  --brand-color: #ffa907 !important
+  --brand-color: #F5C518 !important
 }
 
 .text-ellipsis {
@@ -85,6 +85,13 @@ nav {
 .text-ellipsis3 {
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text-ellipsis4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;

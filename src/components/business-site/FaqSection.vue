@@ -1,5 +1,5 @@
 <template>
-    <div class="my-3 py-3">
+    <div class=" bg-dark my-3 py-3">
         <div class="container">
             
             <div>
@@ -8,7 +8,7 @@
                     <div class="d-flex overflow-x-scroll gap-3 my-3 p-2 px-3 rounded" id="scroll">
                         <li class="nav-item border rounded-pill" role="presentation" v-for="(price, index) in pricing"
                             :key="index">
-                            <button class="nav-link" :class="{ 'active': index === activeTabIndex }"
+                            <button class="nav-link text-white" :class="{ 'active': index === activeTabIndex }"
                                 :id="'tab-' + index" data-bs-toggle="pill" :data-bs-target="'#content-' + index"
                                 type="button" role="tab" :aria-controls="'content-' + index"
                                 :aria-selected="index === activeTabIndex" @click="activeTabIndex = index">{{ price.name
@@ -29,19 +29,19 @@
                         :aria-labelledby="'tab-' + index" tabindex="0">
                         <div class="row">
                             <div class="col-12" v-for="(faq, index) in filteredFaqs(price.plans)" :key="index">
-                                <div class="accordion accordion-flush" id="accordionFlushExample">
-                                    <div class="accordion-item my-2 border-0">
+                                <div class="accordion accordion-flush bg-dark" id="accordionFlushExample">
+                                    <div class="accordion-item my-2 border-0 ">
                                         <h2 class="accordion-header border">
-                                            <button class="accordion-button collapsed bg-light border-start border-4" type="button"
+                                            <button class="accordion-button text-white bg-dark collapsed bg-light border-start border-4" type="button"
                                                 data-bs-toggle="collapse" :data-bs-target="'#flush-collapseOne' + index"
                                                 aria-expanded="false" :aria-controls="'flush-collapseOne' + index"
-                                                style="border-color: var(--bg-primary) !important;"
+                                                style="border-color: var(--brand-color) !important;"
                                                 >
                                                 <span class="me-2">Q{{ index + 1 }}.</span> {{ faq.question }}
                                             </button>
                                         </h2>
                                         <div :id="'flush-collapseOne' + index"
-                                            class="accordion-collapse collapse border-0"
+                                            class="accordion-collapse collapse border-0 bg-dark text-white"
                                             data-bs-parent="#accordionFlushExample">
                                             <div class="accordion-body text-start">{{ faq.answer }}</div>
                                         </div>
@@ -270,14 +270,24 @@ export default {
     transition: background-color 0.3s ease, color 0.3s ease;
 
 }
-
+.form-control{
+    box-shadow: none !important;
+}
 .nav-link.active {
-    background-color: var(--bg-primary) !important;
-    color: white;
+    background-color: var(--brand-color) !important;
+    color: black !important;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     border-radius: 2rem;
     /* transform: scale(1.2); */
 }
-
+.accordion-button:not(.collapsed) {
+    color: black !important;
+    background-color: var(--brand-color) !important;
+    box-shadow: none !important;
+}.accordion-button:focus {
+    z-index: 3;
+    outline: 0;
+    box-shadow: none !important;
+}
 /* Add any necessary styling here */
 </style>

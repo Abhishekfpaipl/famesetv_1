@@ -69,27 +69,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card bg-dark text-white p-2">
-                    <div class="row d-flex justify-content-center align-items-center">
-                        <strong class="fs-4">All our paid plans include:</strong>
-                        <div class="col-12 col-md-6">
-                            <ul class="list-group">
-                                <li v-for="(tag, index) in tags" :key="index"
-                                    class="list-group-item text-start text-capitalize border-0 bg-dark text-white">
-                                    <i class="bi bi-check-circle text-success"></i>
-                                    <span class="ms-2">{{ tag }}.</span>
-                                </li>
-                            </ul>
-                            <div class="text-start px-3 py-2">Local taxes (VAT, GST, etc.) will be charged in addition
-                                to the prices
-                                mentioned.</div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <img src="https://oweb.zohowebstatic.com/sites/oweb/images/zohobigin/bigin-plans-include-1x.webp"
-                                height="320" width="400" style="object-fit: contain;" class="w-100" alt="">
-                        </div>
-                    </div>
-                </div>
+                 
             </div>
         </div>
     </div>
@@ -587,13 +567,7 @@ export default {
 
 
             ],
-            tags: [
-                "30-day dedicated onboarding service.",
-                "access to our bi-weekly webinars",
-                "basic product traning(Individuals/ team members)",
-                "support through phone, email and live chat",
-                "assistance with data import"
-            ]
+            
         };
     },
     mounted() {

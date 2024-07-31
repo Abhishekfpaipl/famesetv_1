@@ -1,13 +1,13 @@
 <template>
-    <div style="padding-top:66px">
-        <div class="text-center fw-bold py-5 text-white" style="background-color: var(--bg-primary)">
+    <div class="bg-dark">
+        <div class="text-center fw-bold py-5 text-white" style="background-color: black">
             <p class="fs-1">Privacy Policy</p>
         </div>
-        <div class="container py-5 rounded-top-5 bg-white" style="margin-top: -40px;">
+        <div class="container py-5 rounded-top-5 bg-dark" style="margin-top: -40px;">
             <div class="row justify-content-center">
                 <div class="col-12">
-                    <div class="card border-0">
-                        <div class="card-body"> 
+                    <div class="card border-0 bg-dark text-white">
+                        <div class="card-body text-start"> 
 
                             <p>SalesWik respects your privacy and is committed to protecting the personal
                                 information you share with us. This Privacy Policy outlines how we collect, use,

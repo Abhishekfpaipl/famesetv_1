@@ -266,6 +266,11 @@ const routes = [
     name: "StoryCoursel",
     component: () => import('@/pages/StoryCoursel.vue')
   },
+  {
+    path: "/career",
+    name: "career-page",
+    component: () => import('@/pages/career-page.vue')
+  },
 
 ];
 

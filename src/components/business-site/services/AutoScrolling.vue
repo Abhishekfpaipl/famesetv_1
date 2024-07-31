@@ -1,5 +1,5 @@
 <template>
-    <div class="py-5 text-white" style="background-color: var(--bg-primary)">
+    <div class="py-5 text-white" style="background-color: #000">
         <h3 class="text-center mb-5 text-capitalize ">we rely on the best to provide the finest service and experience
         </h3>
         <article :class="['wrapper', { 'wrapper--vertical': isVertical }]">
@@ -41,44 +41,119 @@ export default {
             links: [
                 {
                     id: 1,
-                    name: 'Amazon',
-                    image: '/img/amazon.png'
+                    name: 'Assembly',
+                    image: '/img/categories/Assembly.svg'
                 },
                 {
                     id: 2,
-                    name: 'Apple',
-                    image: "/img/apple.png"
+                    name: 'Automobiles',
+                    image: "/img/categories/Automobiles.svg"
                 },
                 {
                     id: 3,
-                    name: 'Aws',
-                    image: "/img/aws.png"
+                    name: 'Boostore',
+                    image: "/img/categories/Boostore.svg"
                 },
                 {
                     id: 4,
-                    name: 'Facebook',
-                    image: "/img/fb.png"
+                    name: 'Business',
+                    image: "/img/categories/Business.svg"
                 },
                 {
                     id: 5,
-                    name: 'Google',
-                    image: "/img/google.png"
+                    name: 'Distribution',
+                    image: "/img/categories/Distribution.svg"
                 },
                 {
                     id: 6,
-                    name: 'Meta',
-                    image: "/img/meta.png"
+                    name: 'Education',
+                    image: "/img/categories/Education.svg"
                 },
                 {
                     id: 7,
-                    name: 'Microsoft',
-                    image: "/img/microsoft.png"
+                    name: 'Electronics',
+                    image: "/img/categories/Electronics.svg"
                 },
                 {
                     id: 11,
-                    name: 'Vodafone',
-                    image: "/img/vodafone.png"
+                    name: 'FMCG',
+                    image: "/img/categories/FMCG.svg"
                 },
+                {
+                    id: 11,
+                    name: 'Footwear',
+                    image: "/img/categories/Footwear.svg"
+                },
+                {
+                    id: 11,
+                    name: 'Garments',
+                    image: "/img/categories/Garments.svg"
+                },
+                {
+                    id: 11,
+                    name: 'Import n Export',
+                    image: "/img/categories/Import n Export.svg"
+                },
+                {
+                    id: 11,
+                    name: 'Manufacturing',
+                    image: "/img/categories/Manufacturing.svg"
+                },
+                {
+                    id: 11,
+                    name: 'Pharmaceuticals',
+                    image: "/img/categories/Pharmaceuticals.svg"
+                },
+                {
+                    id: 11,
+                    name: 'Restraunts',
+                    image: "/img/categories/Restraunts.svg"
+                },
+                {
+                    id: 11,
+                    name: 'Retail Shop',
+                    image: "/img/categories/Retail Shop.svg"
+                },
+                {
+                    id: 11,
+                    name: 'Retail',
+                    image: "/img/categories/Retail.svg"
+                },
+                {
+                    id: 11,
+                    name: 'Salon',
+                    image: "/img/categories/Salon.svg"
+                },
+                {
+                    id: 11,
+                    name: 'Services',
+                    image: "/img/categories/Services.svg"
+                },
+                {
+                    id: 11,
+                    name: 'Subscription',
+                    image: "/img/categories/Subscription.svg"
+                },
+                {
+                    id: 11,
+                    name: 'Supermart',
+                    image: "/img/categories/Supermart.svg"
+                },
+                {
+                    id: 11,
+                    name: 'Supply Chain',
+                    image: "/img/categories/Supply Chain.svg"
+                },
+                {
+                    id: 11,
+                    name: 'Textiles',
+                    image: "/img/categories/Textiles.svg"
+                },
+                {
+                    id: 11,
+                    name: 'Warehouse',
+                    image: "/img/categories/Warehouse.svg"
+                }, 
             ]
         };
     },
@@ -91,7 +166,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 :root {
     --color-text: navy;
     --color-bg: papayawhip;

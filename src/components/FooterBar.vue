@@ -1,10 +1,11 @@
 <template>
-    <div class="container-fluid text-dark bg-light pt-3 border-top border-bottom">
+    <div class="container-fluid text-white pt-3" style="background-color: black !important;">
         <div class="row">
             <div class="col-12 col-md-4 mb-3">
                 <router-link to="/">
-                    <img :src="img" style="width: 100px;object-fit: contain;">
+                    <img :src="img" style="width: 100px;object-fit: contain;filter: invert(1);">
                 </router-link> 
+                <p class="mb-0 fs-1 text-uppercase">Fameset</p>
             </div>
 
             <div class=" col-12 col-md-4 mb-3 text-center">
@@ -25,14 +26,14 @@
                 <div class="mb-3 text-start">
                     <p class="mb-2 fw-bold">Company</p>
                     <div class="d-flex flex-column">
-                        <router-link :to="link.link" class="text-decoration-none my-1 text-dark"
+                        <router-link :to="link.link" class="text-decoration-none my-1 text-white"
                             v-for="(link, index) in company" :key="index">{{ link.name }}</router-link>
                     </div>
                 </div>
                 <div class="mb-3 text-start">
                     <p class="mb-2 fw-bold">Resources</p>
                     <div class="d-flex flex-column">
-                        <router-link :to="link.link" class="text-decoration-none my-1 text-dark"
+                        <router-link :to="link.link" class="text-decoration-none my-1 text-white"
                             v-for="(link, index) in links" :key="index">{{ link.name }}</router-link>
                     </div>
                 </div>

@@ -1,10 +1,10 @@
 <template>
-    <div style="padding-top:66px">
-        <div class="text-center fw-bold py-5 text-white" style="background-color: var(--bg-primary);" v-observe>
+    <div class="text-bg-dark">
+        <div class="text-center fw-bold py-5 text-white" style="background-color: black;" v-observe>
             <p class="fs-1 mb-0">Career</p>
             <p class="fs-5">LOOKING FOR A CAREER, JOIN US !</p>
         </div>
-        <div class="container py-5 rounded-top-5 bg-white" style="margin-top: -40px;" v-observe>
+        <div class="container rounded-top-5 bg-dark py-5" style="margin-top: -40px;" v-observe>
             <div class="row">
                 <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
                     <img src="/img/career-benefit.svg" style="width: 500px; max-width: 80%" alt="">
@@ -20,15 +20,10 @@
                             <label for="floatingInput" class="ms-2 text-muted">Designation</label>
                         </div>
                         <div class="mt-2 form-floating">
-                            <input type="number" class="form-control" placeholder="Phone No." v-model="number">
-                            <label for="floatingInput" class="ms-2 text-muted">Phone No</label>
-                        </div>
-                        <div class="mt-2 form-floating">
                             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
                                 v-model="note"></textarea>
                             <label for="floatingTextarea" class="ms-2 text-muted">Notes</label>
                         </div>
-                        <ImagePdfUpload />
                         <div class="col-12 mt-3">
                             <button class="btn btn-warning py-2 fs-5 w-100 rounded-0 text-dark"
                                 type="submit">Submit</button>
@@ -38,7 +33,7 @@
 
             </div>
         </div>
-        <div class="py-5" style="background-color: var(--bg-forth)">
+        <div class="py-5" >
             <div class="container">
                 <h3 class="text-capitalize mb-4">Employee Benefits</h3>
                 <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
@@ -79,12 +74,8 @@
 </template>
 
 <script>
-import ImagePdfUpload from "@/components/business-site/ImagePdfUpload.vue";
 export default {
     name: 'CareerPage',
-    components: {
-        ImagePdfUpload,
-    },
     data() {
         return {
             datas: [
@@ -152,16 +143,23 @@ export default {
                     icon: 'bi bi-check2-circle',
                     heading: 'Fulfilling Legal Requirements'
                 }
-            ],
-            mobile: '',
-            email: '',
-            number: '',
+            ], 
+            name: '',
+            designation: '',
             note: ''
         }
     },
     methods: {
-        loginAccount() {
-            console.log(this.mobile, this.email, this.number, this.note)
+        submitQuery() {
+            if (this.name != "" && this.designation != "" && this.note != "") {
+                const phoneNumber = '918860012001'; // Replace with your WhatsApp number
+                const message = `Hello, my name is ${this.name}. I am : ${this.designation}. Here are some additional notes: ${this.note}.`;
+                const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+                this.name = "",
+                    this.service = "",
+                    this.note = "";
+            }
         }
     }
 
