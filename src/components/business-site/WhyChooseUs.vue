@@ -1,5 +1,5 @@
 <template>
-    <div class="" >
+    <div class="">
         <div class="container px-3 px-md-0">
             <h1 class="text-center text-capitalize">Lots of other features</h1>
             <h4 class="text-center text-capitalize">to manage your fame</h4>
@@ -43,70 +43,71 @@ export default {
     name: "OurService",
     data() {
         return {
-            servicesLeft: [
+            "servicesLeft": [
                 {
-                    id: 1,
-                    title: "Contact Details",
-                    icon: "bi-headset",
-                    description: "Providing round-the-clock support to address your needs anytime, anywhere.",
+                    "id": 1,
+                    "title": "Contact Details",
+                    "icon": "bi-headset",
+                    "description": "Providing seamless communication channels to ensure you're always connected with us."
                 },
                 {
-                    id: 2,
-                    title: "Social Profiles",
-                    icon: "bi-person-square",
-                    description: "Ensuring the highest standards of quality in every project we deliver.",
+                    "id": 2,
+                    "title": "Social Profiles",
+                    "icon": "bi-person-square",
+                    "description": "Showcasing our professional presence and updates across all major social platforms."
                 },
                 {
-                    id: 3,
-                    title: "Skillset",
-                    icon: "bi-pie-chart ",
-                    description: "Offering fully tailored solutions to meet your unique business requirements.",
+                    "id": 3,
+                    "title": "Skillset",
+                    "icon": "bi-pie-chart",
+                    "description": "Highlighting our diverse and specialized skills to meet your business needs."
                 },
                 {
-                    id: 4,
-                    title: "Timeline",
-                    icon: "bi-clock-history",
-                    description: "Delivering high-quality services at affordable and competitive prices.",
+                    "id": 4,
+                    "title": "Timeline",
+                    "icon": "bi-clock-history",
+                    "description": "A detailed view of our project timelines and key milestones achieved."
                 },
                 {
-                    id: 4,
-                    title: "Share",
-                    icon: "bi-share",
-                    description: "Delivering high-quality services at affordable and competitive prices.",
-                },
+                    "id": 5,
+                    "title": "Share",
+                    "icon": "bi-share",
+                    "description": "Easily share our content and updates with your network to spread the word."
+                }
             ],
-            servicesRight: [
+            "servicesRight": [
                 {
-                    id: 1,
-                    title: "Qr Code",
-                    icon: "bi-qr-code",
-                    description: "Proven success and reliability in delivering exceptional results.",
+                    "id": 1,
+                    "title": "Qr Code",
+                    "icon": "bi-qr-code",
+                    "description": "Quick access to information through our QR codes for efficient engagement."
                 },
                 {
-                    id: 2,
-                    title: "Website Widget",
-                    icon: "bi-window-plus",
-                    description: "A decade of experience and expertise in the industry.",
+                    "id": 2,
+                    "title": "Website Widget",
+                    "icon": "bi-window-plus",
+                    "description": "Integrate our services seamlessly into your website for enhanced user experience."
                 },
                 {
-                    id: 3,
-                    title: "Fun Facts",
-                    icon: "bi-123",
-                    description: "Minimized maintenance expenses for long-term savings.",
+                    "id": 3,
+                    "title": "Fun Facts",
+                    "icon": "bi-123",
+                    "description": "Interesting insights and trivia about our company and industry."
                 },
                 {
-                    id: 4,
-                    title: "Attributes",
-                    icon: "bi-stars",
-                    description: "Scalable solutions to accommodate businesses of all sizes.",
+                    "id": 4,
+                    "title": "Attributes",
+                    "icon": "bi-stars",
+                    "description": "Highlighting the unique features and qualities that set us apart."
                 },
                 {
-                    id: 4,
-                    title: "Payment",
-                    icon: "bi-bank",
-                    description: "Scalable solutions to accommodate businesses of all sizes.",
-                },
+                    "id": 5,
+                    "title": "Payment",
+                    "icon": "bi-bank",
+                    "description": "Flexible payment options to suit your convenience and preferences."
+                }
             ]
+
         }
     }
 }

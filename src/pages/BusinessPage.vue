@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div class=" ">
+    <div class="bg-dark">
+        <div class="">
             <ServicesFormBanner />
         </div>
         <div class="">

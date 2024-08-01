@@ -1,6 +1,6 @@
 <template>
-  <div> 
-    <div class="" style="padding-top:66px; background-color:var(--bg-primary) ">
+  <div class="bg-dark"> 
+    <div class="" style="background-color:black ">
       <div class="container mb-3 py-5">
         <label for="categorySelect" class="form-label text-white fs-4">Filter by Customers</label>
         <select v-model="selectedCategory" class="form-select" id="categorySelect">
@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 my-5">
+      <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 py-5">
         <div class="col" v-for="(sentence, index) in filteredSentences" :key="index">
           <router-link :to="'/service/' + generateSlug(sentence)" class="card text-decoration-none">
             <div class="card-body py-0" :style="{ backgroundColor: randomColors[index] }">

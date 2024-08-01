@@ -166,7 +166,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 :root {
     --color-text: navy;
     --color-bg: papayawhip;

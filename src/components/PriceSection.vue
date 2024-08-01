@@ -2,9 +2,9 @@
     <div class="my-3 py-3">
         <div class="my-3">
             <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
-                <div class="d-flex border p-2 px-3 rounded shadow">
+                <div class="d-flex border  border-secondary p-2 px-3 rounded shadow">
                     <li class="nav-item" role="presentation" v-for="(price, index) in pricing" :key="price.id">
-                        <button class="nav-link text-muted" :class="{ 'active': index === 0 }" :id="'tab-' + index"
+                        <button class="nav-link text-white" :class="{ 'active': index === 0 }" :id="'tab-' + index"
                             data-bs-toggle="pill" :data-bs-target="'#content-' + index" type="button" role="tab"
                             :aria-controls="'content-' + index" :aria-selected="index === 0">{{ price.name }}</button>
                     </li>
@@ -15,8 +15,8 @@
                     :key="price.id" :id="'content-' + index" role="tabpanel" :aria-labelledby="'tab-' + index"
                     tabindex="0">
                     <div class="table-responsive pb-4">
-                        <table class="table table-bordered table-light table-striped" style="width: 100%;">
-                            <thead class="border-bottom">
+                        <table class="table table-bordered table-dark table-striped" style="width: 100%;">
+                            <thead class="border-bottom  border-secondary">
                                 <tr>
                                     <th class="text-start">Plan Features</th>
                                     <th scope="col" class="border-end text-center" v-for="plan in price.plans"
@@ -39,8 +39,8 @@
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody class="border-start border-end">
-                                <tr class="border-bottom" v-for="(feature, index) in price.plans[0].features"
+                            <tbody class="border-start border-end  border-secondary">
+                                <tr class="border-bottom  border-secondary" v-for="(feature, index) in price.plans[0].features"
                                     :key="index">
                                     <th class="pb-1 text-start">
                                         <span class="fw-normal smaller">{{ feature.name }}</span>

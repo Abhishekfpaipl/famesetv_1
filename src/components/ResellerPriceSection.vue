@@ -1,18 +1,11 @@
 <template>
     <div class="my-3 py-3">
         <div class="container">
-            <!-- <h1 class="text-center text-capitalize">Services</h1>
-            <small>No hidden charges only pay what you see</small> -->
 
             <div class="row row-cols-2 row-cols-md-4 my-3">
                 <div class="col" v-for="(plan, index) in plans" :key="index">
-                    <div class="card mb-3 px-3 bg-light rounded-0" :class="{ 'recommended': index === 2 }">
-
-                        <!-- <div v-if="index === 2" class="position-absolute top-0 start-0 m-2 ms-0"
-                            style="font-size: 12px;">
-                            <span class='text-dark fw-bold bg-warning p-1 px-2 rounded-end-3'>Recommended</span>
-                        </div> -->
-
+                    <div class="card mb-3 px-3 py-2 rounded-0 text-white" :class="{ 'recommended': index === 2 }"
+                        style="background-color:black !important;">
                         <div class="py-2 border-bottom fw-bold">{{ plan.name }}</div>
                         <div class="card-body text-center">
                             <div class="d-flex justify-content-center align-items-center gap-2">
@@ -21,22 +14,23 @@
                                 <p v-else class="mb-0 card-title smaller fw-bold">Custom</p>
                             </div>
                             <p><small class="text-capitalize smaller">₹ / sale</small></p>
-                            <!-- <p v-else class="smaller">Contact</p> -->
                             <div v-if="plan.price" class="d-flex justify-content-center align-items-center">
-                                <p class="fw-light d-inline-block px-4 rounded-3 text-bg-warning "                                    style="background-color: var(--brand-color)">
-                                    <!-- <span class="text-decoration-line-through text-white">{{ plan.mrp }}</span> -->
-                                    <span class="text-dark"> ({{ getDiscount(plan) }}% Off)</span>
+                                <p class="fw-bold d-inline-block px-4 rounded-3 text-bg-warning "
+                                    style="background-color: var(--brand-color)">
+                                    <span class="text-danger"> ({{ getDiscount(plan) }}% Off)</span>
                                 </p>
                             </div>
                             <p v-else class="fw-light d-inline-block px-4 rounded-3 text-bg-warning">Contact</p>
 
                             <ul v-if="plan.features" class="list-group">
-                                <small class="text-start text-uppercase fw-bold my-2 text-primary smaller">{{ plan.key
+                                <small class="text-start text-uppercase fw-bold my-2 smaller"
+                                    style="color:var(--brand-color) !important;">{{ plan.key
                                     }}</small>
                                 <li v-for="(feature, featureIndex) in plan.features.slice(0, 2)" :key="featureIndex"
-                                    class="px-0 d-flex justify-content-between list-group-item bg-light text-start text-capitalize border-0 smaller">
+                                    class="px-0 d-flex justify-content-between list-group-item text-white text-start text-capitalize border-0 smaller"
+                                    style="background-color:black !important;">
                                     <div class="">
-                                        <i class="bi bi-check-circle text-success"></i>
+                                        <i class="bi bi-check-circle" style="color:var(--brand-color) !important;"></i>
                                         <span class="px-2">
                                             {{ feature.text }}
                                         </span>
@@ -46,15 +40,10 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="card-footer bg-light p-0 border-top pt-2">
-                            <!-- <p class="card-text text-capitalize">{{ plan.description }}</p> -->
-
+                        <div class="card-footer  p-0 border-top pt-2" style="background-color:black !important;">
                             <div class="btn-group w-100 my-2">
-                                <!-- <router-link :to="plan.link" class="btn border btn-light text-capitalize px-4">
-                                    Know More
-                                </router-link> -->
                                 <a :href="'https://wa.me/8860012001?text=' + encodeURIComponent('Hello, I want to get your ' + plan.name + ' service')"
-                                    class="btn text-capitalize px-4 text-white btn-success">
+                                    class="btn text-capitalize px-4 text-dark btn-warning">
                                     <i class="bi bi-whatsapp"></i>
                                     <span class="ms-2">Enquiry</span>
                                 </a>

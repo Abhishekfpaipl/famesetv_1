@@ -1,6 +1,6 @@
 <template>
-    <div class="text-white" style="background-color: black">
-        <div class="my-5">
+    <div class="text-bg-dark" >
+        <div class="">
             <ServicesFormBanner brandColorOne="#125252" brandName="work wity" :text="text" :customer="customer"
                 :service="service" :category="category" :place="place" v-observe />
         </div>
@@ -22,16 +22,10 @@
         <div class="my-5">
             <TempCustomers :reviews="customers" title="our customers" v-observe />
         </div>
-        <div class="my-5">
+        <div class=" ">
             <ServicesSalesCounter :service="service" :serviceCount="2000" :category="category" :categoryCount="1500"
                 :place="place" :placeCount="5000" v-observe />
-        </div>
-        <div class="my-5">
-            <ServicesOurService v-observe />
-        </div>
-        <div class="my-5">
-            <ServicesFameFoot service="Website Development" :category="null" :place="null" v-observe />
-        </div>
+        </div> 
     </div>
 </template>
 <script>

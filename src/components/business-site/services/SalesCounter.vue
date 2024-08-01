@@ -2,7 +2,7 @@
     <div>
         <div class="p-5 d-md-flex justify-content-between align-items-center" >
             <div class="d-flex justify-content-center align-items-center">
-                <img src="/img/smile.svg" style="width: 450px; max-width: 80%" alt="">
+                <img src="/img/smile.svg" style="width: 450px; max-width: 80%" alt="smile">
             </div>
             <div class="row mt-4">
                 <div class="d-flex flex-column justify-content-center mb-4">
