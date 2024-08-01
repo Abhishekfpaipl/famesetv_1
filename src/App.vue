@@ -2,7 +2,7 @@
   <DashboardNav v-if="!hide" />
   <router-view />
   <FooterBar v-if="!hidden" />
-  <FameFoot />
+  <FameFoot v-if="!hidden" />
 </template>
 <script>
 import DashboardNav from "@/components/DashboardNav.vue";
@@ -30,7 +30,7 @@ export default {
         'LoginPage', 'RegistrationPage', 'EmailVerificationPage', 'ForgotPasswordPage', 'ResetPasswordPage',
         'BasicDetails', 'ConnectDetails', 'OverviewDetails', 'WorktimeDetails', 'BusinessTypeDetails', 'BrandingDetails',
         'ProductList', 'CreateProduct', 'CollectionList', 'RewardsDetails', 'DashboardPage',  'SupportersDetails','FamesetDetails','CategoryDetails','BankDetails','SocialDetails','DigitalCard','CollectionPage',
-        'NotificationDetails','RequestDetails','ShowcaseDetails','TimelineDetails','TestimonialDetails',
+        'NotificationDetails','RequestDetails','ShowcaseDetails','TimelineDetails','TestimonialDetails','DemoPage', 
       ]
       return hiddenPages.includes(this.$route.name)
     }
@@ -58,7 +58,9 @@ nav {
     }
   }
 }
-
+.form-control{
+  box-shadow: none !important;
+}
 :root {
   --bg-primary: #014c75;
   --bg-secondary: #EB5E28;

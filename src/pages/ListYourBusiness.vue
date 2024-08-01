@@ -6,7 +6,7 @@
             <VideoSection v-observe />
         </div> -->
         <div class="my-5">
-            <ServicesLeadManagement :values="leads" title="Features, that boost your attention!" v-observe />
+            <ServicesLeadManagement :values="leads" title="Incredible Features," subtitle=" that boost your fame!" v-observe />
         </div>
         <div class="my-5">
             <WhyChooseUs :description="whychooseUs" title="why choose us" v-observe />

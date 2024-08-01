@@ -1,6 +1,5 @@
 <template>
-  <div class="container bg-light rounded my-5">
-    <h2 class="text-center mb-4">How it works</h2>
+  <div class="container bg-dark rounded my-5"> 
     <div class="how-it-works" :class="{ 'mobile-view': isMobile }">
       <div v-for="(step, index) in steps" :key="index" class="step-container">
         <div class="step-number">{{ index + 1 }}</div>

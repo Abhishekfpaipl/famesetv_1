@@ -2,6 +2,7 @@
     <div class=" container">
         <div class="py-2 mb-4">
             <h1 class="text-center text-capitalize">{{ title }}</h1> 
+            <p class="text-center text-capitalize fs-4">{{ subtitle }}</p>
         </div>
         <div class="row row-cols-1 row-cols-md-1 row-cols-lg-4 g-3">
             <div class="col" v-for="(lead, index) in values" :key="index">
@@ -31,6 +32,9 @@ export default {
             type: Array,
         },
         title: {
+            type: String,
+        },
+        subtitle: {
             type: String,
         },
     },

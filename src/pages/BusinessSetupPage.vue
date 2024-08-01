@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="bg-dark">
         <CarouselBanner />
         <div class=" text-center fw-bold py-5 text-bg-dark">
             <div class="container">
@@ -65,12 +65,12 @@
                     tempore.</p>
             </div>
         </div>
-        <div class="py-5 rounded-top-5 bg-white" style="margin-top: -40px;" v-observe>
+        <div class="py-5 rounded-top-5 text-bg-dark" v-observe>
             <div class="sticky-nav my-4">
-                <div class="d-flex gap-3 p-3 py-2 overflow-x-scroll" id="scroll"
-                    style="background-color:rgba(255, 206, 86, 0.2); border:1px solid rgba(255, 206, 86, 1) !important;">
+                <div class="d-flex gap-3 p-3 py-2 overflow-x-scroll border-top border-bottom border-secondary" id="scroll"
+                    style="background-color:black !important;">
                     <div v-for="(section, index) in sections" :key="index">
-                        <a :href="'#' + section.id" class="nav-link text-dark"
+                        <a :href="'#' + section.id" class="nav-link text-white" style="white-space: nowrap"
                             @click.prevent="scrollToSection(section.id)"
                             :class="{ active: activeSection === section.id }">
                             {{ section.name }}
@@ -97,7 +97,7 @@ import AccessSection from '@/components/business/AccessSection.vue';
 import BusinessCounter from '@/components/business/BusinessCounter.vue';
 import BusinessSell from '@/components/business/BusinessSell.vue';
 import HowItWorks from '@/components/business/HowItWorks.vue';
-import JourneySection from '@/components/business/JourneySection.vue';
+// import JourneySection from '@/components/business/JourneySection.vue';
 import SuccessStory from '@/components/business/SuccessStory.vue';
 import PriceSection from "@/components/BusinessPriceSection.vue";
 import FaqSection from "@/components/FaqSection.vue";
@@ -107,7 +107,7 @@ export default {
         BusinessCounter,
         BusinessSell,
         HowItWorks,
-        JourneySection,
+        // JourneySection,
         AccessSection,
         SuccessStory,
         PriceSection,
@@ -119,10 +119,10 @@ export default {
                 { id: 'Price', name: 'Price', component: 'PriceSection' },
                 { id: 'AccessSection', name: 'Access', component: 'AccessSection' },
                 { id: 'Counter', name: 'Counter', component: 'BusinessCounter' },
-                { id: 'Sell', name: 'Sell', component: 'BusinessSell' },
+                { id: 'Sell', name: 'Why Sell', component: 'BusinessSell' },
                 { id: 'FAQ', name: 'FAQ', component: 'FaqSection' },
                 { id: 'How It Works', name: 'How It Works', component: 'HowItWorks' },
-                { id: 'Journey ', name: 'Journey ', component: 'JourneySection' },
+                // { id: 'Journey ', name: 'Journey ', component: 'JourneySection' },
                 { id: 'Success Story ', name: 'Success Story ', component: 'SuccessStory' },
             ],
             activeSection: '',
@@ -169,12 +169,13 @@ export default {
 }
 
 .nav-link.active {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--brand-color);
+    color:var(--brand-color) !important;
 }
 
 .sticky-nav {
     position: sticky;
-    top: 80px !important;
+    top: 70.5px !important;
     z-index: 9;
     background-color: white;
 }

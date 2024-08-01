@@ -9,14 +9,14 @@
         <h2 class="text-light mb-4">5x Growth</h2>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col" v-for="tool in tools" :key="tool.title">
-                <div class="card h-100">
+                <div class="card h-100 border-secondary text-white" style="background-color:black !important;">
                     <div class="card-body text-start">
                         <div class="d-flex align-items-center">
                             <i :class="tool.icon" class="fs-1"></i>
                             <span class="fs-4 ms-3">{{ tool.title }}</span>
                         </div>
                         <p class="card-text">{{ tool.description }}</p>
-                        <a href="#" class="text-decoration-none text-warning">Learn More</a>
+                        <!-- <a href="#" class="text-decoration-none text-warning">Learn More</a> -->
                     </div>
                 </div>
             </div>

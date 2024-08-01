@@ -1,9 +1,9 @@
 <template>
-    <div style="padding-top:66px">
+    <div class="text-bg-dark min-vh-100">
         <div class="container py-5">
             <div class="row">
                 <div class="col-12 col-md-6 text-center">
-                    <h1 class="mb-4 text-capitalize">Book free demo.</h1>
+                    <h1 class="mb-4 text-capitalize">Schedule your free demo.</h1>
                     <img src="/img/demo.svg" class="" style="width:250px; object-fit: contain;" alt="">
                     <div class="d-flex gap-2 justify-content-start align-items-center ps-md-5 text-start text-md-center"
                         v-for="(link, index) in links" :key="index">
@@ -11,22 +11,22 @@
                         <p class="my-1">{{ link }}</p>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 border bg-light p-3 mt-5 mt-md-0">
+                <div class="col-12 col-md-6 border bg-light p-3 mt-5 mt-md-0" style="background-color: #000 !important;">
                     <p class="my-1">Please fill in the form here, and we'll have the best
                         product expert reach out to you for a one-to-one demo.</p>
-                        <form @submit.prevent="submitQuery()" class="mt-4 row g-3 needs-validation" novalidate>
+                        <form @submit.prevent="submitQuery()" class="mt-4 row g-3 needs-validation" style="background-color: #000 !important;">
                         <div class="w-100 form-floating mt-0">
-                            <input type="text" class="form-control" placeholder="" v-model="name" required>
-                            <label for="floatingInput" class="text-muted ms-2">Name</label>
+                            <input type="text" class="form-control bg-dark border-secondary" placeholder="" v-model="name" required>
+                            <label for="floatingInput" class="text-secondary ms-2">Name</label>
                         </div>
                         <div class="w-50 form-floating mt-2">
-                            <input type="tel" class="form-control" placeholder="Mobile" v-model="number" required>
-                            <label class="ms-2 text-muted">Mobile No</label>
+                            <input type="tel" class="form-control bg-dark border-secondary" placeholder="Mobile" v-model="number" required>
+                            <label class="ms-2 text-secondary">Mobile No</label>
                         </div>
                         <div class="mt-2 w-50">
-                            <select class="form-select py-3" name="CompanyCountry" v-model="selectedCountry"
+                            <select class="form-select py-3 bg-dark text-white border-secondary" name="CompanyCountry" v-model="selectedCountry"
                                 aria-required="true" required="true">
-                                <option disabled label="Country/Region" class="text-muted" selected value="">
+                                <option disabled label="Country/Region" class="text-white" selected value="">
                                     Country/Region</option>
                                 <option v-for="country in countries" :key="country.value" :value="country.value">
                                     {{ country.label }}
@@ -34,30 +34,29 @@
                             </select>
                         </div>
                         <div class="w-100 form-floating mt-2">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                            <textarea class="form-control bg-dark border-secondary" placeholder="Leave a comment here" id="floatingTextarea"
                                 v-model="note"></textarea>
-                            <label for="floatingTextarea" class="ms-2 text-muted">Describe your requirements</label>
+                            <label for="floatingTextarea" class="ms-2 text-secondary">Describe your requirements</label>
                         </div>
 
                         <div class="form-check text-start ms-2">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
                                 v-model="agree">
-                            <label class="form-check-label small" for="flexCheckDefault">
-                                I agree to the <router-link to="/agreement" class="text-dark text-capitalize">terms and
+                            <label class="form-check-label small text-secondary" for="flexCheckDefault">
+                                I agree to the <router-link to="/term-of-use" class="text-light text-capitalize">terms and
                                     conditions</router-link> and
-                                <router-link to="/privacy-policy" class="text-dark text-capitalize">privacy
+                                <router-link to="/privacy-policy" class="text-light text-capitalize">privacy
                                     policy.</router-link>
                             </label>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-warning py-2 fs-5 w-100 rounded-0 text-dark" type="submit">Start my
-                                free demo</button>
+                            <button class="btn btn-warning py-2 fs-5 w-100 rounded-0 text-dark" type="submit">Confirm</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-        <p class="text-center py-4 text-white mb-0 position-fixed bottom-0 w-100" style="background-color: var(--bg-primary);">Questions? Talk to an
+        <p class="text-center py-4 mb-0 position-fixed bottom-0 w-100 " style="color: var(--brand-color) !important; background-color: #000 !important;">Questions? Talk to an
             expert: 8860012001</p>
     </div>
 </template>
@@ -65,10 +64,9 @@
 export default {
     data() {
         return {
-            links: [
-                "We will get to know first your exact requirements.",
-                "Arrange your live and personalized demo of SalesWik.",
-                "Explian you how SalesWik can help you to grow your business.",
+            links: [ 
+                "Arrange your live and personalized demo of Fameset.",
+                "Explian you how Fameset can help you to grow your business.",
                 "Q&A session with our product expert.",
                 "In-depth explanation of pricing and features.",
             ],
@@ -317,6 +315,8 @@ export default {
     },
 }
 </script>
-<style lang="">
-
+<style scoped>
+    select option:hover{
+        background-color: white !important
+    }
 </style>
