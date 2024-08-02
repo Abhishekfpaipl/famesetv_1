@@ -2,7 +2,7 @@
     <div class="my-3 py-3">
         <div class="container">
 
-            <div class="row row-cols-2 row-cols-md-4 my-3">
+            <div class="row row-cols-1 row-cols-md-4 my-3">
                 <div class="col" v-for="(plan, index) in plans" :key="index">
                     <div class="card mb-3 px-3 py-2 rounded-0 text-white" :class="{ 'recommended': index === 2 }"
                         style="background-color:black !important;">

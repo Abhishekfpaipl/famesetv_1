@@ -12,8 +12,9 @@
             </p>
             <div class="p-2 row">
                 <div v-for="(data, index) in datas" :key="index" class="col-12 col-md-6 g-3">
-                    <div class="d-flex align-items-center border p-2">
-                        <img :src="data.icon" :alt="data.name" style="width: 8%; filter: grayscale(1);" class="mx-3">
+                    <div class="d-flex align-items-center border p-2"
+                        style="background-color: black !important; min-height: 120px;">
+                        <i :class="data.icon" class="fs-2 mx-3"></i> 
                         <div class=" ms-2">
                             <span class="fw-bold">{{ data.heading }}</span>
                             <p>{{ data.text }}</p>
@@ -30,32 +31,32 @@ export default {
         return {
             datas: [
                 {
-                    icon: 'https://tss-static-images.gumlet.io/career-revamp/think different.svg',
+                    icon: 'bi bi-lightbulb',
                     heading: 'Think Different',
                     text: 'Random ideas, new suggestions, and challenging the norm are always welcome.'
                 },
                 {
-                    icon: 'https://tss-static-images.gumlet.io/career-revamp/ownership of work.svg',
+                    icon: 'bi bi-person',
                     heading: 'Stay Weird, Be Yourself',
                     text: 'The Souled Store is strictly a judgment-free zone. Just be the best version of yourself.'
                 },
                 {
-                    icon: 'https://tss-static-images.gumlet.io/career-revamp/respect everyone.svg',
+                    icon: 'bi bi-people',
                     heading: 'Respect Everyone',
                     text: 'Treat others how you’d like to be treated, and you have a happy family.'
                 },
                 {
-                    icon: 'https://tss-static-images.gumlet.io/career-revamp/Growth and learning.svg',
+                    icon: 'bi bi-check-square',
                     heading: 'Ownership Of Work',
                     text: 'Give every task, small or big, your best shot. Always remember- 99% right is 100% wrong.'
                 },
                 {
-                    icon: 'https://tss-static-images.gumlet.io/career-revamp/stay weird.svg',
+                    icon: 'bi bi-gear',
                     heading: 'Take Initiative',
                     text: 'Want to change something? Change it. See something that needs fixing? Fix it.'
                 },
                 {
-                    icon: 'https://tss-static-images.gumlet.io/career-revamp/take initiative.svg',
+                    icon: 'bi bi-graph-up',
                     heading: 'Growth & Learning',
                     text: 'Work with various teams and departments and learn something new every day.'
                 },

@@ -47,7 +47,7 @@
                                     </th>
                                     <td class="pb-1 text-center" v-for="plan in price.plans" :key="plan.id">
                                         <i v-if="plan.features[index].included"
-                                            class="bi bi-check2 fs-5 text-success smaller"></i>
+                                            class="bi bi-check2 fs-5 text-warning smaller"></i>
                                         <i v-else class="bi bi-dash fs-5 text-secondary"></i>
                                     </td>
                                 </tr>
@@ -284,7 +284,7 @@ export default {
 
 .nav-link.active {
     background-color: var(--brand-color) !important;
-    color: white !important;
+    color: black !important;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     /* transform: scale(1.2); */
 }

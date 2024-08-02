@@ -1,14 +1,14 @@
 <template>
-    <div class="container text-dark bg-dark my-5">
-        <div class="row row-cols-1 row-cols-md-4 mx-1 g-4">
+    <div class="container-fluid text-dark bg-dark py-5">
+
+        <div class="row row-cols-1 row-cols-md-3 g-2">
             <div v-for="(item, index) in fav" :key="index" class="col">
-                <div class="p-2 card shadow"
-                    style="background-color:black !important;border-color: #FFCE56 !important;">
+                <div class="p-2 card" style="background-color:black !important;">
                     <p class="fw-bold fs-1 mb-0 d-flex justify-content-center align-items-center"
                         style="color:var(--brand-color) !important;">
-                        <AutoCounter :data="item.data" /><span>&nbsp;{{ item.info }}&nbsp;+</span>
+                        <AutoCounter :data="item.data" /><span>&nbsp;{{ item.info }}+</span>
                     </p>
-                    <p  style="color:var(--brand-color) !important;">{{ item.label }}</p>
+                    <p class="small" style="color:var(--brand-color) !important;">{{ item.label }}</p>
                 </div>
             </div>
         </div>
@@ -24,25 +24,20 @@ export default {
         return {
             fav: [
                 {
-                    data: 11,
-                    info: 'Lakh',
-                    label: 'Trust Meesho to sell online',
+                    data: 12,
+                    info: 'K',
+                    label: 'Business Categories Coverage',
 
                 },
                 {
-                    data: 14,
-                    info: 'Crore',
-                    label: 'Customers buying across India'
+                    data: 19,
+                    info: '',
+                    label: ' Countries Reach Worldwide'
                 },
                 {
-                    data: 19000,
-                    info: '',
-                    label: 'Pincode Supported for delivery'
-                },
-                {
-                    data: 700,
-                    info: '',
-                    label: 'Categories to sell online'
+                    data: 8,
+                    info: 'B',
+                    label: 'Billions People Requirement'
                 },
             ],
         }

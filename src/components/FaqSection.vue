@@ -19,7 +19,7 @@
             <div class="d-flex align-items-center shadow p-2 mb-3">
                 <div class="input-group  mb-3">
                     <input type="search" class="form-control border-secondary text-white" id="floatingInput" v-model="searchTerm" style="background-color:black !important"
-                        @keyup.enter="search" ref="searchInput" placeholder="name@example.com">
+                        @keyup.enter="search" ref="searchInput" placeholder="Search here...">
                     <span class="input-group-text border-secondary" style="color:#FFF5DD !important; background-color: black !important" id="basic-addon1"> <i class="bi bi-search me-2"
                             @click="search"></i> Search</span>
                 </div>  

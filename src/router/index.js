@@ -92,10 +92,16 @@ const routes = [
     component: () => import("@/pages/PrivacyPolicy.vue")
   },
   {
-    path: "/reseller-program",
-    name: "ResellerProgram",
-    component: () => import("@/pages/ResellerProgram.vue")
+    path: "/authorized-reseller",
+    name: "AuthorizedReseller",
+    component: () => import("@/pages/AuthorizedReseller.vue")
   },
+  {
+    path: "/bulk-seller",
+    name: "BulkSelling",
+    component: () => import("@/pages/BulkSelling.vue")
+  },
+
   {
     path: "/service/:slug",
     name: "ServicePage",

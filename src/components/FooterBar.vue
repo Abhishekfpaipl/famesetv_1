@@ -4,7 +4,7 @@
             <div class="col-12 col-md-4 mb-3">
                 <router-link to="/">
                     <img :src="img" style="width: 100px;object-fit: contain;filter: invert(1);">
-                </router-link> 
+                </router-link>
                 <p class="mb-0 fs-1 text-uppercase">Fameset</p>
             </div>
 
@@ -67,7 +67,12 @@ export default {
                 {
                     id: 3,
                     name: 'Authorized seller',
-                    link: '/reseller-program'
+                    link: '/authorized-reseller'
+                },
+                {
+                    id: 3,
+                    name: 'Bulk seller',
+                    link: '/bulk-seller'
                 },
                 {
                     id: 9,
@@ -100,7 +105,7 @@ export default {
                     id: 1,
                     name: 'Terms Of Use',
                     link: '/term-of-use'
-                }, 
+                },
                 {
                     id: 3,
                     name: 'Business',
