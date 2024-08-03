@@ -1,79 +1,14 @@
-<!-- <template>
-    <div>
-        <div class="container my-5">
-            <h1 class="px-2 text-center mb-5">Testimonials</h1>
-            <div class="position-relative">
-                <div class="d-flex gap-3 overflow-x-scroll" ref="techScrollContainer" id="scroll">
-                    <div class="col-12" v-for="(team, index) in reviews" :key="index">
-                        <div class="card mx-4 mx-md-0 position-relative" style="min-width: 18rem;">
-                            <div class="card-body p-0">
-                                <div class="d-flex align-items-center gap-2 mb-2 p-2 bg-light border-bottom">
-                                    <img :src="team.img" class="rounded-circle" alt="..."
-                                        style="height:60px;width: 60px;object-fit: cover;object-position: top;">
-                                    <div class="ms-2">
-                                        <h5 class="lh-1 text-start">{{ team.name }}</h5>
-                                        <div class="d-flex gap-2 overflow-x-scroll w-75" id="scroll">
-                                            <img :src="image" style="width: 20px; height: 20px; object-fit: contain;"
-                                                v-for="image in images" :key="image.id" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="p-2" style="min-height:235px">
-                                    <p class="smaller pe-1 text-end">{{ team.date }}</p>
-                                    <p class="text-ellipsis7"><span class="fw-bold">"</span> {{ team.value }} <span
-                                            class="fw-bold">"</span></p>
-                                </div>
-                                <div class="position-absolute end-0 text-dark" style="font-size: 12px;top: 55px;">
-                                    <span class="bg-light border p-1 px-2 rounded-start-3">
-                                        <i class="bi bi-star-fill text-warning small me-2"></i>
-                                        <span class="fw-bold">{{ team.user_rating }}</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="card-footer p-0">
-                                <div class="d-flex p-2 overflow-x-scroll mt-3" id="scroll">
-                                    <div class="" style="min-width: 100px;" v-for="(skill, index) in skills"
-                                        :key="index">
-                                        <p class="smaller">Out of 10</p>
-                                        <div class="skill-circle">
-                                            <div class="circle-wrap" :style="getCircleStyle(skill.score)">
-                                                <div class="inside-circle fs-5">{{ skill.score }}</div>
-                                            </div>
-                                        </div>
-                                        <p class="text-center mt-2 smaller">{{ skill.name }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="rounded-circle border d-flex justify-content-center align-items-center position-absolute bg-light"
-                    @click="scrollLeft($refs.techScrollContainer)"
-                    style="width: 40px; height:40px ;top: 40%; left: -4%">
-                    <i class="bi bi-chevron-left"></i>
-                </div>
-                <div class="rounded-circle border d-flex justify-content-center align-items-center position-absolute bg-light"
-                    @click="scrollRight($refs.techScrollContainer)"
-                    style="width: 40px; height:40px ;top: 40%; right: -4%">
-                    <i class="bi bi-chevron-right"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-</template> -->
-
-
 <template>
     <div class="container my-5">
         <h1 class="text-capitalize text-center">Testimonials</h1>
         <div class="w-100 d-block">
-            <div class="w-100 overflow-auto d-flex align-items-center overflow-x-hidden" ref="slider">
+            <div class="w-100 overflow-auto d-flex align-items-center justify-content-start overflow-x-hidden" ref="slider">
                 <div v-for="(review, index) in infiniteReviews" :key="index" @click="showUser(review, index)"
                     class="btn rounded-circle m-2 mx-3 d-flex" :class="{ selectedDiv: isSelected(review.id) }">
                     <img :src="review.img" class="rounded-circle" alt="User Image">
                 </div>
             </div>
-            <div> 
+            <div>
                 <div class="card position-relative" style="min-width: 18rem;">
                     <div class="card-body p-0">
                         <div class="d-flex justify-content-between align-items-center bg-light border-bottom p-2">
@@ -82,7 +17,7 @@
                                 <i class="bi bi-star-fill text-warning small me-2"></i>
                                 <span class="">{{ getSelectedReviewText.user_rating }}</span>
                             </span>
-                            <span class=""> 
+                            <span class="">
                                 <span class="">{{ getSelectedReviewText.date }}</span>
                             </span>
                         </div>
@@ -363,7 +298,7 @@ img {
     --bs-btn-padding-x: 5px;
     --bs-btn-padding-y: 5px;
 }
- 
+
 /* ::-webkit-scrollbar {
     width: 10px;
 }

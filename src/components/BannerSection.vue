@@ -49,6 +49,33 @@
                     <span>Profile</span>
                 </router-link>
             </div>
+            <div class="d-flex justify-content-center align-items-center gap-4 mt-5">
+                <router-link to="/digital-card-employee"
+                    class="d-flex flex-column align-items-center justify-content-center btn btn-danger rounded">
+                    <i class="bi bi-person-plus"></i>
+                    <span>Employee</span>
+                </router-link>
+                <router-link to="/digital-card-professional"
+                    class="d-flex flex-column align-items-center justify-content-center btn btn-danger rounded">
+                    <i class=" bi bi-shop"></i>
+                    <span>Professionals</span>
+                </router-link>
+                <router-link to="/digital-card-service"
+                    class="d-flex flex-column align-items-center justify-content-center btn btn-danger rounded">
+                    <i class="bi bi-person-circle "></i>
+                    <span>Service Provider</span>
+                </router-link>
+                <router-link to="/digital-card"
+                    class="d-flex flex-column align-items-center justify-content-center btn btn-danger rounded">
+                    <i class="bi bi-person "></i>
+                    <span>Retailer</span>
+                </router-link>
+                <router-link to="/digital-card-student"
+                    class="d-flex flex-column align-items-center justify-content-center btn btn-danger rounded">
+                    <i class="bi bi-person "></i>
+                    <span>Student</span>
+                </router-link>
+            </div>
         </div>
     </div>
 </template>

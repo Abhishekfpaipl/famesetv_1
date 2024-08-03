@@ -9,49 +9,21 @@
                 </div>
                 <div class="col-md-6 d-flex flex-column justify-content-center align-items-center mt-3 mt-md-0">
 
-                    <p class="mb-0  fs-2 fw-bold">Mariana Anderson</p>
+                    <p class="mb-0  fs-2 fw-bold text-capitalize">{{heading}}</p>
 
-                    <p class="smaller text-ellipsis">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Nostrum
-                        quaerat harum voluptatem cupiditate? Molestias similique eum incidunt atque quibusdam
-                        exercitationem.</p>
+                    <p class="smaller text-ellipsis text-capitalize">{{ subheading }}</p>
 
                     <div class="d-md-flex justify-content-between align-items-start my-1 fs-5">
                         <div class="d-flex justify-content-center justify-content-md-start gap-2 align-items-start ">
                             <span>Fameset</span>
                             <i class="bi bi-star-fill text-warning"></i>
-                            <span>8.5 Rating</span> 
-                        </div> 
-                    </div> 
-                </div>
-            </div>
-        </div>
-        <!-- <div class="my-5">
-            <h1 class="text-center mb-4">Top Promoters</h1>
-            <div class="d-flex justify-content-center  gap-2 overflow-x-scroll w-100" id="scroll">
-                <img :src="image" style="width: 80px; height: 80px; object-fit: contain;" v-for="image in images"
-                    :key="image.id" alt="">
-            </div>
-        </div>
-        <div class="container text-dark bg-white my-5">
-            <div class="row row-cols-4 row-cols-md-4 mx-1 g-1">
-                <div v-for="(item, index) in fav" :key="index" class="col">
-                    <div class="p-2 card shadow" :data-bs-toggle="item.offcanvas ? 'offcanvas' : ''"
-                        :data-bs-target="item.offcanvas ? '#' + item.offcanvas : ''"
-                        style="background-color: #FFF5DD !important; border-color: #FFCE56 !important;">
-                        <div class="d-md-flex justify-content-between align-items-center border-bottom pb-2"
-                            style="border-color: #FFCE56 !important;">
-                            <i :class="item.iconClass" class="text-dark fs-5"></i>
-                            <p class="fw-bold smaller mb-0">{{ item.label }}</p>
+                            <span>8.5 Rating</span>
                         </div>
-                        <p class="fw-bold fs-1 mb-0 d-flex justify-content-center align-items-center">
-                            <AutoCounter :data="item.data" />&nbsp;+
-                        </p>
                     </div>
                 </div>
             </div>
-        </div>  -->
-        <TestimonialSection /> 
+        </div>
+        <TestimonialSection />
         <OffcanvasRating />
         <OffcanvasPromoters />
         <OffcanvasThankful />
@@ -73,6 +45,16 @@ export default {
         TestimonialSection,
         OffcanvasPromoters,
         OffcanvasThankful,
+    },
+    props:{
+        heading: {
+            type: String,
+            required: true
+        },
+        subheading: {
+            type: String,
+            required: true
+        }
     },
     data() {
         return {

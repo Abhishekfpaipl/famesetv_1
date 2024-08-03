@@ -21,16 +21,7 @@
                         <span>8.5</span>
                     </div>
                 </div>
-            </div>
-            <!-- <div class="d-flex align-items-center gap-3 pe-2 p text-white">
-                <div class="d-flex  gap-1 align-items-start smaller" style="">
-                    <span>Fameset</span>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <span>8.5</span> 
-                </div>
-                <i @click="toggleIcon('bookmark')" class="fs-5" :class="bookmarkIcon"></i>
-                <i class="bi bi-share fs-5"></i>
-            </div> -->
+            </div> 
         </div>
     </div>
 </template>

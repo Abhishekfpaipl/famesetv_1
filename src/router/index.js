@@ -19,7 +19,27 @@ const routes = [
   {
     path: "/digital-card",
     name: "DigitalCard",
-    component: () => import("@/pages/DigitalCard.vue")
+    component: () => import("@/pages/DigitalCardRetail.vue")
+  },
+  {
+    path: "/digital-card-employee",
+    name: "DigitalCardEmployee",
+    component: () => import("@/pages/DigitalCardEmployee.vue")
+  },
+  {
+    path: "/digital-card-professional",
+    name: "DigitalCardProfessional",
+    component: () => import("@/pages/DigitalCardProfessional.vue")
+  },
+  {
+    path: "/digital-card-service",
+    name: "DigitalCardServiceProvider",
+    component: () => import("@/pages/DigitalCardServiceProvider.vue")
+  },
+  {
+    path: "/digital-card-student",
+    name: "DigitalCardStudent",
+    component: () => import("@/pages/DigitalCardStudent.vue")
   },
   // {
   //   path: "/review-list",
